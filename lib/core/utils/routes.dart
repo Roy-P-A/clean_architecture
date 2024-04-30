@@ -11,7 +11,7 @@ class AppRoutes {
   // Specify the correct type for the routes map
   static Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     //splash: (context) => SplashScreen(),
-    login: (context) => const LoginPage(),
+    login: (context) => LoginPage(),
     // mainLayout: (context) => const MainLayoutScreen(),
     // createOrder: (context) => const CreateOrderScreen(),
   };

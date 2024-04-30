@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/widgets/custom_background.dart';
+import '../login_bk/login_bk.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_email_textfield_widget.dart';
 import '../widgets/custom_password_textfield_widget.dart';
@@ -9,28 +11,38 @@ import '../widgets/remember_me_forgot_password.dart';
 import '../widgets/signin_button_list.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  LoginPage({super.key});
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        FocusScopeNode currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus) {
-          currentFocus.unfocus();
-        }
-      },
-      child: Scaffold(
-              resizeToAvoidBottomInset: true,
-              body: Stack(
-                children: [
-                  const CustomBackground(),
-                  Container(
-                    width: double.infinity,
-                    // height: double.infinity,
-                    padding: const EdgeInsets.all(20),
-                    child: SafeArea(
-                      child: SingleChildScrollView(
+    return BlocProvider(
+      create: (context) => LoginBloc(),
+      child: BlocConsumer<LoginBloc, LoginState>(
+        listener: (context, state) {
+          // TODO: implement listener
+        },
+        builder: (context, state) {
+          return GestureDetector(
+              onTap: () {
+                FocusScopeNode currentFocus = FocusScope.of(context);
+                if (!currentFocus.hasPrimaryFocus) {
+                  currentFocus.unfocus();
+                }
+              },
+              child: Scaffold(
+                resizeToAvoidBottomInset: true,
+                body: Stack(
+                  children: [
+                    const CustomBackground(),
+                    Container(
+                      width: double.infinity,
+                      // height: double.infinity,
+                      padding: const EdgeInsets.all(20),
+                      child: SafeArea(
+                        child: SingleChildScrollView(
                           reverse: true,
                           physics: const AlwaysScrollableScrollPhysics(),
                           child: Column(
@@ -173,13 +185,13 @@ class LoginPage extends StatelessWidget {
                             ],
                           ),
                         ),
-                      
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            )
-       
+                  ],
+                ),
+              ));
+        },
+      ),
     );
   }
 }
