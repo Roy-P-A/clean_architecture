@@ -47,7 +47,7 @@ dependencies:
   another_flushbar: 1.12.30
   shared_preferences: 2.2.2
   loading_overlay: 0.3.0
-  google_mobile_ads: 5.0.0
+
   share_plus: 7.2.2
   screenshot: 2.3.0
   connectivity_plus: 5.0.2
@@ -55,10 +55,7 @@ dependencies:
   firebase_auth: 4.19.0
   firebase_messaging: 14.8.0
   flutter_local_notifications: 16.3.2
-  google_sign_in: 6.2.1
-  sign_in_with_apple: 6.0.0
-  flutter_facebook_auth: 6.1.0
-  in_app_purchase: 3.1.13
+ 
 
 
 
@@ -94,6 +91,18 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/svgs/
+    - assets/svgs/images/
+    - assets/svgs/images/dashboard/
+    - assets/svgs/images/signin/
+    - assets/svgs/images/profile/
+    - assets/images/home_background/
+    - assets/images/profile/
+    - assets/images/categories/
+    - assets/images/personalize/
+    - assets/images/plainbackground/
+    - assets/images/abstract/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'core/utils/routes.dart';
 
 Future<void> initCleanArchitectureApp() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +27,8 @@ class CleanArchitectureApp extends StatelessWidget {
         DismissKeyboardNavigationObserver(),
         //NavigatorObserverWithOrientation(),
       ],
+      initialRoute: AppRoutes.login,
+      routes: AppRoutes.routes,
     );
   }
 }
