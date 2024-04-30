@@ -36,6 +36,30 @@ dependencies:
   get_it: 7.6.7
   injectable: 2.3.2
   dio: 5.4.1
+  dartz: 0.10.1
+  flutter_svg: 2.0.9
+  #
+  path_provider: 2.1.2
+  url_launcher: 6.2.5
+  flutter_inappwebview: 6.0.0
+  scroll_loop_auto_scroll: 0.0.5
+  carousel_slider: 4.2.1
+  another_flushbar: 1.12.30
+  shared_preferences: 2.2.2
+  loading_overlay: 0.3.0
+  google_mobile_ads: 5.0.0
+  share_plus: 7.2.2
+  screenshot: 2.3.0
+  connectivity_plus: 5.0.2
+  firebase_core: 2.29.0
+  firebase_auth: 4.19.0
+  firebase_messaging: 14.8.0
+  flutter_local_notifications: 16.3.2
+  google_sign_in: 6.2.1
+  sign_in_with_apple: 6.0.0
+  flutter_facebook_auth: 6.1.0
+  in_app_purchase: 3.1.13
+
 
 
   # The following adds the Cupertino Icons font to your application.
